@@ -18,11 +18,12 @@ public class Temperatur {
     @GeneratedValue
     protected Long id;
 
-    protected Long temp;
+    protected String temp;
 
-    protected Timestamp datum;
+    //protected Timestamp datum;
+    protected String datum;
 
-    public Temperatur(long temp, Timestamp datum){
+    public Temperatur(String temp, String datum){
         this.temp = temp;
         this.datum = datum;
     }

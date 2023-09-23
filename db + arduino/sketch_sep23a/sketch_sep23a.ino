@@ -25,8 +25,8 @@ void loop() {
 
     float temperature = (voltage - 500) / 10;
   // print out the value you read:
-  Serial.println("temperatur: ");
+  //Serial.println("temperatur: ");
   Serial.println(temperature);
 
-  delay(1000);
+  delay(10000);
 }
