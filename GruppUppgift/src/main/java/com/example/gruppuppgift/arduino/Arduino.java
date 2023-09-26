@@ -44,7 +44,13 @@ public class Arduino extends Thread{
             temp.setTemp(data.nextLine());
             temp.setDatum(sdf1.format(timestamp));
 
-            temprepo.save(temp);
+            try {
+                temprepo.save(temp);
+                System.out.println("Saved to the database: " + temp.getTemp());
+            } catch (Exception e) {
+                System.err.println("Error saving to the database: " + e.getMessage());
+                e.printStackTrace();
+            }
 
         }
 
