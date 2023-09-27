@@ -1,7 +1,7 @@
 package com.example.gruppuppgift;
 
-import com.example.gruppuppgift.arduino.Arduino;
-import com.example.gruppuppgift.repositories.TemperaturRepo;
+import com.example.gruppuppgift.temperatur.arduino.Arduino;
+import com.example.gruppuppgift.temperatur.repositories.TemperaturRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

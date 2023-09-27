@@ -1,16 +1,14 @@
-package com.example.gruppuppgift.arduino;
+package com.example.gruppuppgift.temperatur.arduino;
 
-import com.example.gruppuppgift.models.Temperatur;
-import com.example.gruppuppgift.repositories.TemperaturRepo;
+import com.example.gruppuppgift.temperatur.models.Temperatur;
+import com.example.gruppuppgift.temperatur.repositories.TemperaturRepo;
 import com.fazecast.jSerialComm.SerialPort;
 import lombok.Data;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.time.LocalDateTime;
 
 
 @Data

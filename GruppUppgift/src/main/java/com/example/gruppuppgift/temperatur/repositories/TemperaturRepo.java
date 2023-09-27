@@ -1,6 +1,6 @@
-package com.example.gruppuppgift.repositories;
+package com.example.gruppuppgift.temperatur.repositories;
 
-import com.example.gruppuppgift.models.Temperatur;
+import com.example.gruppuppgift.temperatur.models.Temperatur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

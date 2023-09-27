@@ -1,4 +1,4 @@
-package com.example.gruppuppgift.models;
+package com.example.gruppuppgift.temperatur.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
