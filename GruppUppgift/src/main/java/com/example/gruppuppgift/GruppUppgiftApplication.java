@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.io.IOException;
+
 @SpringBootApplication
 public class GruppUppgiftApplication {
 
@@ -18,7 +20,9 @@ public class GruppUppgiftApplication {
     @Bean
     public CommandLineRunner demo(TemperaturRepo tempRepo){
         return args ->{
+            //Instansiering av klassen arduino
             Arduino arduino = new Arduino(tempRepo);
+            //Kommando för att starta thread
             arduino.start();
         };
     }

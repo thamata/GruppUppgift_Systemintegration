@@ -16,14 +16,14 @@ import java.text.SimpleDateFormat;
 public class Temperatur {
     @Id
     @GeneratedValue
-    protected Long id;
+    protected Long id; //id med auto increment
 
-    protected String temp;
+    protected String temp; //variabel för temperatur data, lättare att hantera om det är en string, behöver inte konvertera datatyp hela tiden
 
     //protected Timestamp datum;
-    protected String datum;
+    protected String datum; //Försökte att lagra som date datatyp i sql, blev String av samma anledning som ovan
 
-    public Temperatur(String temp, String datum){
+    public Temperatur(String temp, String datum){ //konstruktor utan id
         this.temp = temp;
         this.datum = datum;
     }

@@ -2,30 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/showAllTemp.css}">
+    <link rel="stylesheet" href="showAllTemp.css">
     <title>Title</title>
 </head>
-<style>
-    table, th, td {
-        border: 1px solid black;
-    }
-</style>
 <body>
-<a href="/"> Hem</a>
-<h2>Test</h2>
+<a id="tohomepage" href="/"><b>Hem</b></a>
+<h1>Alla Temperaturer</h1>
+<button onclick="ShowAndHide()" id="myButton">Visa ID</button>
+<br></br>
 <div class="allTemp" th:unless="${#lists.isEmpty(allTemp)}">
-
     <table>
         <tr>
+            <th id="hidden">ID</th>
             <th>Datum</th>
-            <th>Temperarurer</th>
+            <th>Temperatur</th>
         </tr>
-        <tr th:each="cat : ${allTemp}">
-            <td th:text="${cat.datum}"></td>
-            <td th:text="${cat.temp}"></td>
+        <tr id="alldata" th:each="temp: ${allTemp}">
+            <td th:text="${temp.id}" id="hidden">id</td>
+            <td th:text="${temp.datum}">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+            <td th:text="${temp.temp} + ' °C'">high temp</td>
+            <td id="e3"><a th:href="@{/deleteById/{id}(id=${temp.id})}" onclick="return confirm('Är du säker')">DELETE</a></td>
         </tr>
     </table>
 </div>
-
-
 </body>
+
+<SCRIPT>
+    function ShowAndHide() {
+        const x = document.getElementById('hidden');
+        // Olaglig html ( ͡° ͜ʖ ͡°), inte unika id
+        var elms = document.querySelectorAll("[id='hidden']");
+ 
+        if (x.style.display == 'table-cell') {
+            for(var i = 0; i < elms.length; i++) 
+                elms[i].style.display='none';
+        } else {
+            for(var i = 0; i < elms.length; i++) 
+                elms[i].style.display='table-cell';
+        }
+    }
+</SCRIPT>
+
 </html>

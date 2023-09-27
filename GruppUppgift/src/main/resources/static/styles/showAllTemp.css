@@ -1,0 +1,40 @@
+table, th, td {
+    border: 1px solid black;
+}
+body{
+    text-align: center;
+}
+table{
+    margin: auto;
+}
+th{
+    padding: 10px;
+}
+td{
+    height: 30px;
+    padding: 0px 10px;
+    text-align: center;
+}
+#e3{
+    width: 100px;
+    color: red;
+    background-color: white;
+}
+#alldata:nth-child(odd){
+    background-color: #d1d1d1;
+}
+#tohomepage{
+    border: 1px solid black;
+    padding: 10px 50px;
+    text-decoration: none;
+    background-color: antiquewhite;
+    color: blue;
+}
+#hidden{
+    display: none;
+}
+button#myButton{
+    position: fixed;
+    bottom: 745px;
+    right: 900px;
+}
