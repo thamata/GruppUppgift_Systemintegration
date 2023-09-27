@@ -1,4 +1,4 @@
-package com.example.gruppuppgift.arduino; // Hej Meriem
+package com.example.gruppuppgift.arduino; 
 
 import com.example.gruppuppgift.models.Temperatur;
 import com.example.gruppuppgift.repositories.TemperaturRepo;
