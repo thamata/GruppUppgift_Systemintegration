@@ -53,7 +53,7 @@ public class Arduino extends Thread{
             //System.out.println(data.nextLine()); //DEBUG
             //System.out.println(new Timestamp(date.getTime())); //DEBUG
 
-            temp.setTemp(data.nextLine()); //Bug där temp blir: 26.26.25 // 2525.76
+            temp.setTemp(data.nextLine()); //Bug där temp blir: 26.26.25 // 2525.76 // Fixat genom att ändra plats på delay i arduino kod
             temp.setDatum(sdf1.format(timestamp)); //sparar nuvarande datum för lagring i DB
 
             try {
