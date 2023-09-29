@@ -20,7 +20,7 @@
         </tr>
         <tr id="alldata" th:each="temp: ${allTemp}">
             <td th:text="${temp.id}" id="hidden">id</td>
-            <td th:text="${temp.datum}">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+            <td th:text="${temp.datum}"></td>
             <td th:text="${temp.temp} + ' °C'">high temp</td>
             <td id="e3"><a th:href="@{/deleteById/{id}(id=${temp.id})}" onclick="return confirm('Är du säker')">DELETE</a></td>
         </tr>

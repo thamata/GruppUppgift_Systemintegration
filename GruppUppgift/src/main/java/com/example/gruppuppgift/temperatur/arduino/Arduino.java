@@ -23,7 +23,7 @@ public class Arduino extends Thread{
         this.temprepo = temprepo;
     }
     public void run(){ //denna metod körs automatiskt så fort en ny tråd är skapad
-        SerialPort port= SerialPort.getCommPort("COM7"); //OBS port kan variera
+        SerialPort port= SerialPort.getCommPort("COM3"); //OBS port kan variera
         SerialPortDataListener listener = new SerialPortDataListener() { //hantering om port stängs
             @Override
             public int getListeningEvents() {
